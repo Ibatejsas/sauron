@@ -1,0 +1,40 @@
+{
+    "name": "Proyecto Sauron by keycloak",
+    "description": "Despliegue del servidor keycloak personalizado mediante el proyecto Sauron",
+    "keywords": [
+        "identity",
+        "oauth",
+        "saml",
+        "keycloak",
+        "heroku"
+    ],
+    "stack": "container",
+    "repository": "https://github.com/Ibatejsas/sauron-main",
+	"logo": "https://www.keycloak.org/resources/images/keycloak_logo_480x108.png",
+    "success_url": "/",
+    "env": {
+        "KEYCLOAK_USER": {
+            "description": "Usuario administrador inicial",
+            "value": "admin"
+        },
+        "KEYCLOAK_PASSWORD": {
+            "description": "Valor de la contraseña de administrador inicial",
+            "value": "introducir contraseña"
+        },
+        "PROXY_ADDRESS_FORWARDING": {
+            "description": "Valor true para utilizar los balanceadores de carga de HEROKU",
+            "value": "true"
+        }
+    },
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "addons": [
+        {
+            "plan": "heroku-postgresql:hobby-dev"
+        }
+    ]
+}
