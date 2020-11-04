@@ -19,7 +19,7 @@
         },
         "KEYCLOAK_PASSWORD": {
             "description": "Valor de la contraseña de administrador inicial",
-            "value": "introducir password"
+            "value": "change_me"
         },
         "PROXY_ADDRESS_FORWARDING": {
             "description": "Valor true para utilizar los balanceadores de carga de HEROKU",
